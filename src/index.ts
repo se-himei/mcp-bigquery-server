@@ -238,7 +238,17 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           properties: {
             sql: {
               type: "string",
-              description: "SQL. Please wrap all column names and table names in backticks (`)"
+              description: `Execute a SQL query on the database.
+
+IMPORTANT SQL FORMATTING RULES:
+- ALL table names and column names MUST be wrapped in backticks (\`table_name\`, \`column_name\`)
+- ALL aliases MUST use only alphanumeric characters and underscores (a-z, A-Z, 0-9, _)
+- Japanese characters are NOT allowed in aliases
+
+Example:
+SELECT \`会計年月\` as accounting_month, COUNT(*) as data_count
+FROM \`viita.profits\`
+GROUP BY \`会計年月\``
             },
             maximumBytesBilled: { 
               type: "string",
@@ -280,6 +290,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         isError: false,
       };
     } catch (error) {
+      console.error('エラー', error)
       throw error;
     }
   }
