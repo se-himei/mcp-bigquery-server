@@ -1,4 +1,5 @@
 # BigQuery MCP Server
+[![npm version](https://badge.fury.io/js/@se-himei%2Fmcp-bigquery-server.svg)](https://www.npmjs.com/package/@se-himei/mcp-bigquery-server)
 [![smithery badge](https://smithery.ai/badge/@ergut/mcp-bigquery-server)](https://smithery.ai/protocol/@ergut/mcp-bigquery-server)
 <div align="center">
   <img src="assets/mcp-bigquery-server-logo.png" alt="BigQuery MCP Server Logo" width="400"/>
@@ -41,6 +42,18 @@ Here's all you need to do:
 - Either Google Cloud CLI installed or a service account key file
 - Claude Desktop (currently the only supported LLM interface)
 
+### Installation from npm
+
+```bash
+npm install -g @se-himei/mcp-bigquery-server
+```
+
+Or use directly with npx:
+
+```bash
+npx @se-himei/mcp-bigquery-server --project-id your-project-id --location us-central1
+```
+
 ### Option 1: Quick Install via Smithery (Recommended)
 To install BigQuery MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/protocol/@ergut/mcp-bigquery-server), run this command in your terminal:
 
@@ -79,7 +92,7 @@ If you prefer manual configuration or need more control:
            "command": "npx",
            "args": [
              "-y",
-             "@ergut/mcp-bigquery-server",
+             "@se-himei/mcp-bigquery-server",
              "--project-id",
              "your-project-id",
              "--location",
@@ -98,7 +111,7 @@ If you prefer manual configuration or need more control:
            "command": "npx",
            "args": [
              "-y",
-             "@ergut/mcp-bigquery-server",
+             "@se-himei/mcp-bigquery-server",
              "--project-id",
              "your-project-id",
              "--location",
@@ -124,7 +137,7 @@ The server accepts the following arguments:
 
 Example using service account:
 ```bash
-npx @ergut/mcp-bigquery-server --project-id your-project-id --location europe-west1 --key-file /path/to/key.json
+npx @se-himei/mcp-bigquery-server --project-id your-project-id --location europe-west1 --key-file /path/to/key.json
 ```
 
 ### Permissions Needed
@@ -141,7 +154,7 @@ Want to customize or contribute? Here's how to set it up locally:
 
 ```bash
 # Clone and install
-git clone https://github.com/ergut/mcp-bigquery-server
+git clone https://github.com/se-himei/mcp-bigquery-server
 cd mcp-bigquery-server
 npm install
 
@@ -178,9 +191,9 @@ Then update your Claude Desktop config to point to your local build:
 
 ## Support & Resources 💬
 
-- 🐛 [Report issues](https://github.com/ergut/mcp-bigquery-server/issues)
-- 💡 [Feature requests](https://github.com/ergut/mcp-bigquery-server/issues)
-- 📖 [Documentation](https://github.com/ergut/mcp-bigquery-server)
+- 🐛 [Report issues](https://github.com/se-himei/mcp-bigquery-server/issues)
+- 💡 [Feature requests](https://github.com/se-himei/mcp-bigquery-server/issues)
+- 📖 [Documentation](https://github.com/se-himei/mcp-bigquery-server)
 
 ## License 📝
 
