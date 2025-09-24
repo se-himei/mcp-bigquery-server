@@ -238,7 +238,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           properties: {
             sql: {
               type: "string",
-              description: "Please wrap all column names and table names in backticks (`)"
+              description: "SQL. Please wrap all column names and table names in backticks (`)"
             },
             maximumBytesBilled: { 
               type: "string",
