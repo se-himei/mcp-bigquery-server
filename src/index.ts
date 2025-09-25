@@ -283,6 +283,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         query: sql,
         location: config.location,
         maximumBytesBilled: maximumBytesBilled.toString(),
+      }, {
+        timeoutMs: 200000,
       });
 
       return {
