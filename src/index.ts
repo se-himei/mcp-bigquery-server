@@ -284,7 +284,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         location: config.location,
         maximumBytesBilled: maximumBytesBilled.toString(),
       }, {
-        timeoutMs: 200000,
+        timeoutMs: 20000,
       });
 
       return {
